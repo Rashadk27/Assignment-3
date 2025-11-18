@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<h1>Assignments</h1>
+<table class="table">
+  <thead><tr><th>Title</th><th>Course</th><th>Due</th><th></th></tr></thead>
+  <tbody>
+  <% assignments.forEach(function(a){ %>
+    <tr>
+      <td><%= a.title %></td>
+      <td><%= a.course %></td>
+      <td><%= a.dueDate.toDateString() %></td>
+      <td>
+        <a class="btn btn-sm btn-secondary" href="/assignments/edit/<%= a._id %>">Edit</a>
+        <form style="display:inline" method="POST" action="/assignments/delete/<%= a._id %>" onsubmit="return confirmDelete(event)">
+          <button class="btn btn-sm btn-danger">Delete</button>
+        </form>
+      </td>
+    </tr>
+  <% }) %>
+  </tbody>
+</table>
+
+<%- include('../partials/footer') %>

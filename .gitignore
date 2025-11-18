@@ -1,3 +1,2 @@
 # to hide our password file (for connecting mongoose)
 .env
-node_modules/

@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+
+
+<div class="container mt-5">
+  <h1>Edit Assignment</h1>
+
+  <form action="/assignments/edit/<%= assignment._id %>" method="POST">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" name="title" value="<%= assignment.title %>" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="course" class="form-label">Course</label>
+      <input type="text" class="form-control" id="course" name="course" value="<%= assignment.course %>" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="dueDate" class="form-label">Due Date</label>
+      <input type="date" class="form-control" id="dueDate" name="dueDate" value="<%= assignment.dueDate.toISOString().split('T')[0] %>" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Assignment</button>
+    <a href="/assignments" class="btn btn-secondary">Cancel</a>
+
+        <a href="/" class="btn btn-secondary mt-3">Back to Home</a>
+
+  </form>
+</div>
+
+<%- include('partials/footer') %>
+

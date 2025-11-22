@@ -5,11 +5,11 @@ const Assignment = require('../models/Assignment');
 // List all (public page)
 router.get('/', async (req, res) => {
   const list = await Assignment.find().sort({ dueDate: 1 });
-  res.render('assignments/list', { assignments: list });
+  res.render('list', { assignments: list }); // removed 'assignments/' prefix
 });
 
 // New form
-router.get('/new', (req, res) => res.render('assignments/new'));
+router.get('/add', (req, res) => res.render('add')); // removed 'assignments/' prefix
 
 // Create
 router.post('/', async (req, res) => {
@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
 // Edit form
 router.get('/edit/:id', async (req, res) => {
   const a = await Assignment.findById(req.params.id);
-  res.render('assignments/edit', { assignment: a });
+  res.render('edit', { assignment: a }); // removed 'assignments/' prefix
 });
 
 // Update

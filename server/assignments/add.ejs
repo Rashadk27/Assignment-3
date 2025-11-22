@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+
+<div class="container mt-5">
+  <h1>Add New Assignment</h1>
+
+  <form action="/assignments" method="POST">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" name="title" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="course" class="form-label">Course</label>
+      <input type="text" class="form-control" id="course" name="course" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="dueDate" class="form-label">Due Date</label>
+      <input type="date" class="form-control" id="dueDate" name="dueDate" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Add Assignment</button>
+    <a href="/assignments" class="btn btn-secondary">Cancel</a>
+
+    <a href="/" class="btn btn-secondary mt-3">Back to Home</a>
+
+  </form>
+</div>
+<%- include('partials/footer') %>
+

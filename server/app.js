@@ -16,6 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // view engine
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 // routes
 const assignmentRoutes = require('./routes/assignments');

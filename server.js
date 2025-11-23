@@ -2,7 +2,8 @@
  * Module dependencies.
  */
 
-var app = require('./server/app');
+const app = require('./server/app.js');
+
 var debug = require('debug')('assignment-tracker:server');
 var http = require('http');
 

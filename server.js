@@ -2,7 +2,7 @@
  * Module dependencies.
  */
 
-var app = require('./server/config/app');
+var app = require('./server/app');
 var debug = require('debug')('car-detail-system:server');
 var http = require('http');
 

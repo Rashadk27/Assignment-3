@@ -3,7 +3,7 @@
  */
 
 var app = require('./server/app');
-var debug = require('debug')('car-detail-system:server');
+var debug = require('debug')('assignment-tracker:server');
 var http = require('http');
 
 /**
